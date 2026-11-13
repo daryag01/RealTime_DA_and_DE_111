@@ -1,6 +1,5 @@
 # Assignment 4 — Distributed Stream Processing (AITU Research Event Analytics)
 
-Variant / task code: **A4-VAR-XX** (set `VARIANT` in `src/config.py` or `AITU_VARIANT` env var)
 
 ## Layout
 | Path | Purpose |
