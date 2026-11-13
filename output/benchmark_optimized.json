@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "label": "optimized",
+    "backend": "memory",
+    "max_poll": 500,
+    "log_each": false,
+    "duration_s": 10.0,
+    "cpu_count": 2,
+    "run_at": "2026-11-13T10:30:21.003712"
+  },
+  "results": [
+    {
+      "input_rate": 10,
+      "events": 100,
+      "elapsed_s": 9.9,
+      "throughput_eps": 10.1,
+      "avg_latency_ms": 0.34,
+      "p95_latency_ms": 0.6,
+      "max_latency_ms": 0.64,
+      "cpu_pct": 4.6
+    },
+    {
+      "input_rate": 100,
+      "events": 1000,
+      "elapsed_s": 9.99,
+      "throughput_eps": 100.1,
+      "avg_latency_ms": 0.36,
+      "p95_latency_ms": 0.61,
+      "max_latency_ms": 1.5,
+      "cpu_pct": 5.9
+    },
+    {
+      "input_rate": 500,
+      "events": 5000,
+      "elapsed_s": 10.0,
+      "throughput_eps": 500.1,
+      "avg_latency_ms": 0.36,
+      "p95_latency_ms": 0.61,
+      "max_latency_ms": 7.63,
+      "cpu_pct": 10.1
+    },
+    {
+      "input_rate": 2000,
+      "events": 20000,
+      "elapsed_s": 10.0,
+      "throughput_eps": 2000.0,
+      "avg_latency_ms": 0.37,
+      "p95_latency_ms": 0.63,
+      "max_latency_ms": 8.58,
+      "cpu_pct": 22.2
+    },
+    {
+      "input_rate": 5000,
+      "events": 50000,
+      "elapsed_s": 10.0,
+      "throughput_eps": 4999.9,
+      "avg_latency_ms": 0.39,
+      "p95_latency_ms": 0.66,
+      "max_latency_ms": 2.68,
+      "cpu_pct": 33.1
+    },
+    {
+      "input_rate": 20000,
+      "events": 200000,
+      "elapsed_s": 10.0,
+      "throughput_eps": 19998.2,
+      "avg_latency_ms": 0.49,
+      "p95_latency_ms": 0.75,
+      "max_latency_ms": 3.64,
+      "cpu_pct": 66.1
+    }
+  ]
+}

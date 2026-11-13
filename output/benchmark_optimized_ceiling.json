@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "label": "optimized_ceiling",
+    "backend": "memory",
+    "max_poll": 500,
+    "log_each": false,
+    "duration_s": 5.0,
+    "cpu_count": 2,
+    "run_at": "2026-11-13T10:30:35.498379"
+  },
+  "results": [
+    {
+      "input_rate": 40000,
+      "events": 200000,
+      "elapsed_s": 5.0,
+      "throughput_eps": 39995.0,
+      "avg_latency_ms": 0.65,
+      "p95_latency_ms": 1.08,
+      "max_latency_ms": 5.7,
+      "cpu_pct": 86.8
+    },
+    {
+      "input_rate": 60000,
+      "events": 300000,
+      "elapsed_s": 5.14,
+      "throughput_eps": 58366.8,
+      "avg_latency_ms": 18.63,
+      "p95_latency_ms": 103.67,
+      "max_latency_ms": 321.64,
+      "cpu_pct": 99.9
+    }
+  ]
+}

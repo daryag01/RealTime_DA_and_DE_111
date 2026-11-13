@@ -1,0 +1,56 @@
+[
+  {
+    "window": "[14:00:00, 14:00:05)",
+    "job_type": "image",
+    "count": 1,
+    "avg_duration": 75.0
+  },
+  {
+    "window": "[14:00:00, 14:00:05)",
+    "job_type": "ml",
+    "count": 1,
+    "avg_duration": 42.0
+  },
+  {
+    "window": "[14:00:00, 14:00:05)",
+    "job_type": "simulation",
+    "count": 1,
+    "avg_duration": 95.0
+  },
+  {
+    "window": "[14:00:00, 14:00:05)",
+    "job_type": "text",
+    "count": 1,
+    "avg_duration": 18.0
+  },
+  {
+    "window": "[14:00:05, 14:00:10)",
+    "job_type": "image",
+    "count": 1,
+    "avg_duration": 88.0
+  },
+  {
+    "window": "[14:00:05, 14:00:10)",
+    "job_type": "ml",
+    "count": 2,
+    "avg_duration": 57.5
+  },
+  {
+    "window": "[14:00:05, 14:00:10)",
+    "job_type": "simulation",
+    "count": 1,
+    "avg_duration": 120.0
+  },
+  {
+    "window": "[14:00:05, 14:00:10)",
+    "job_type": "text",
+    "count": 1,
+    "avg_duration": 22.0
+  },
+  {
+    "window": "[14:00:10, 14:00:15)",
+    "job_type": "image",
+    "count": 1,
+    "avg_duration": 70.0
+  }
+]

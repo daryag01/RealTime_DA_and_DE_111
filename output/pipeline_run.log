@@ -1,0 +1,119 @@
+2026-11-13 10:27:28,971 producer sent E001  key=G01  -> aitu.research.events[p2] offset=0
+2026-11-13 10:27:28,971 producer sent E002  key=G02  -> aitu.research.events[p1] offset=0
+2026-11-13 10:27:28,971 producer sent E003  key=G01  -> aitu.research.events[p2] offset=1
+2026-11-13 10:27:28,971 producer sent E004  key=G03  -> aitu.research.events[p0] offset=0
+2026-11-13 10:27:28,971 producer sent E005  key=G02  -> aitu.research.events[p1] offset=1
+2026-11-13 10:27:28,971 producer sent E006  key=G01  -> aitu.research.events[p2] offset=2
+2026-11-13 10:27:28,972 producer sent E007  key=G03  -> aitu.research.events[p0] offset=1
+2026-11-13 10:27:28,972 producer sent E008  key=G02  -> aitu.research.events[p1] offset=2
+2026-11-13 10:27:28,972 producer sent E009  key=G01  -> aitu.research.events[p2] offset=3
+2026-11-13 10:27:28,972 producer sent E010  key=G03  -> aitu.research.events[p0] offset=2
+2026-11-13 10:27:28,972 producer sent X001  key=G02  -> aitu.research.events[p1] offset=3
+2026-11-13 10:27:28,972 producer sent X002  key=G01  -> aitu.research.events[p2] offset=4
+2026-11-13 10:27:28,972 consumer valid   p2@0 E001 G01 ml         completed dur=42 cpu=61
+2026-11-13 10:27:28,972 consumer valid   p1@0 E002 G02 image      completed dur=75 cpu=74
+2026-11-13 10:27:28,972 consumer valid   p2@1 E003 G01 text       completed dur=18 cpu=38
+2026-11-13 10:27:28,972 consumer valid   p0@0 E004 G03 simulation failed    dur=95 cpu=92
+2026-11-13 10:27:28,972 consumer valid   p1@1 E005 G02 ml         completed dur=51 cpu=68
+2026-11-13 10:27:28,972 consumer valid   p2@2 E006 G01 image      completed dur=88 cpu=81
+2026-11-13 10:27:28,972 consumer valid   p0@1 E007 G03 ml         failed    dur=64 cpu=89
+2026-11-13 10:27:28,972 consumer WINDOW CLOSED {'window': '14:00:00-14:00:05', 'events': 'E001,E002,E003,E004', 'count': 4, 'failure_rate_pct': 25.0, 'avg_cpu': 66.25}
+2026-11-13 10:27:28,972 consumer valid   p1@2 E008 G02 text       completed dur=22 cpu=44
+2026-11-13 10:27:28,972 consumer valid   p2@3 E009 G01 simulation completed dur=120 cpu=94
+2026-11-13 10:27:28,972 consumer valid   p0@2 E010 G03 image      completed dur=70 cpu=78
+2026-11-13 10:27:28,972 consumer INVALID p1@3 X001: invalid job_type 'quantum'
+2026-11-13 10:27:28,972 consumer INVALID p2@4 X002: field 'duration_sec' has wrong type str
+2026-11-13 10:27:29,974 consumer WINDOW CLOSED (end of stream) {'window': '14:00:05-14:00:10', 'events': 'E005,E006,E007,E008,E009', 'count': 5, 'failure_rate_pct': 20.0, 'avg_cpu': 75.2}
+2026-11-13 10:27:29,974 consumer WINDOW CLOSED (end of stream) {'window': '14:00:10-14:00:15', 'events': 'E010', 'count': 1, 'failure_rate_pct': 0.0, 'avg_cpu': 78.0}
+{
+  "consumed": 12,
+  "valid": 10,
+  "status_counts": {
+    "completed": 8,
+    "failed": 2
+  },
+  "by_job_type": [
+    {
+      "job_type": "ml",
+      "completed": 2,
+      "failed": 1,
+      "avg_duration": 52.33
+    },
+    {
+      "job_type": "image",
+      "completed": 3,
+      "failed": 0,
+      "avg_duration": 77.67
+    },
+    {
+      "job_type": "text",
+      "completed": 2,
+      "failed": 0,
+      "avg_duration": 20.0
+    },
+    {
+      "job_type": "simulation",
+      "completed": 1,
+      "failed": 1,
+      "avg_duration": 107.5
+    }
+  ],
+  "avg_cpu_by_group": [
+    {
+      "research_group": "G01",
+      "events": 4,
+      "avg_cpu": 68.5
+    },
+    {
+      "research_group": "G02",
+      "events": 3,
+      "avg_cpu": 62.0
+    },
+    {
+      "research_group": "G03",
+      "events": 3,
+      "avg_cpu": 86.33
+    }
+  ],
+  "windows": [
+    {
+      "window": "14:00:00-14:00:05",
+      "events": "E001,E002,E003,E004",
+      "count": 4,
+      "failure_rate_pct": 25.0,
+      "avg_cpu": 66.25
+    },
+    {
+      "window": "14:00:05-14:00:10",
+      "events": "E005,E006,E007,E008,E009",
+      "count": 5,
+      "failure_rate_pct": 20.0,
+      "avg_cpu": 75.2
+    },
+    {
+      "window": "14:00:10-14:00:15",
+      "events": "E010",
+      "count": 1,
+      "failure_rate_pct": 0.0,
+      "avg_cpu": 78.0
+    }
+  ],
+  "dead_letter": [
+    {
+      "event_id": "X001",
+      "partition": 1,
+      "offset": 3,
+      "errors": [
+        "invalid job_type 'quantum'"
+      ]
+    },
+    {
+      "event_id": "X002",
+      "partition": 2,
+      "offset": 4,
+      "errors": [
+        "field 'duration_sec' has wrong type str"
+      ]
+    }
+  ]
+}

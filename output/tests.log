@@ -1,0 +1,5 @@
+PASS test_all_supplied_events_valid
+PASS test_invalid_events_rejected
+PASS test_part_b_aggregates
+PASS test_part_c_windows_boundary_and_values
+PASS test_late_event_dropped_after_watermark

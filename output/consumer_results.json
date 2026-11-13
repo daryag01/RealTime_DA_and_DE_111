@@ -1,0 +1,93 @@
+{
+  "consumed": 12,
+  "valid": 10,
+  "dead_letter": [
+    {
+      "event_id": "X001",
+      "partition": 1,
+      "offset": 3,
+      "errors": [
+        "invalid job_type 'quantum'"
+      ]
+    },
+    {
+      "event_id": "X002",
+      "partition": 2,
+      "offset": 4,
+      "errors": [
+        "field 'duration_sec' has wrong type str"
+      ]
+    }
+  ],
+  "late_events": [],
+  "status_counts": {
+    "completed": 8,
+    "failed": 2
+  },
+  "by_job_type": [
+    {
+      "job_type": "ml",
+      "completed": 2,
+      "failed": 1,
+      "avg_duration": 52.33
+    },
+    {
+      "job_type": "image",
+      "completed": 3,
+      "failed": 0,
+      "avg_duration": 77.67
+    },
+    {
+      "job_type": "text",
+      "completed": 2,
+      "failed": 0,
+      "avg_duration": 20.0
+    },
+    {
+      "job_type": "simulation",
+      "completed": 1,
+      "failed": 1,
+      "avg_duration": 107.5
+    }
+  ],
+  "avg_cpu_by_group": [
+    {
+      "research_group": "G01",
+      "events": 4,
+      "avg_cpu": 68.5
+    },
+    {
+      "research_group": "G02",
+      "events": 3,
+      "avg_cpu": 62.0
+    },
+    {
+      "research_group": "G03",
+      "events": 3,
+      "avg_cpu": 86.33
+    }
+  ],
+  "windows": [
+    {
+      "window": "14:00:00-14:00:05",
+      "events": "E001,E002,E003,E004",
+      "count": 4,
+      "failure_rate_pct": 25.0,
+      "avg_cpu": 66.25
+    },
+    {
+      "window": "14:00:05-14:00:10",
+      "events": "E005,E006,E007,E008,E009",
+      "count": 5,
+      "failure_rate_pct": 20.0,
+      "avg_cpu": 75.2
+    },
+    {
+      "window": "14:00:10-14:00:15",
+      "events": "E010",
+      "count": 1,
+      "failure_rate_pct": 0.0,
+      "avg_cpu": 78.0
+    }
+  ]
+}
